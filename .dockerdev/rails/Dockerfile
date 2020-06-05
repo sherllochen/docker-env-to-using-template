@@ -33,7 +33,7 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrad
     build-essential \
     postgresql-client-$PG_MAJOR \
     default-mysql-client default-libmysqlclient-dev \
-    nodejs \
+    nodejs sudo\
     yarn=$YARN_VERSION-1 \
     $(cat /tmp/Aptfile | xargs) && \
     apt-get clean && \
